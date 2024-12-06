@@ -296,7 +296,7 @@ CREATE TABLE `TABLE_HRD_CONTACTS_V01` (
 -- Records of TABLE_HRD_CONTACTS_V01
 -- ----------------------------
 
-
+DROP TABLE IF EXISTS `options`;
 CREATE TABLE `options` (
   `option_id` bigint(20) UNSIGNED NOT NULL,
   `option_name` varchar(191) DEFAULT NULL,
@@ -440,7 +440,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` VALUES ('4', 'm0abc', '$2a$08$r9UF3YhipAY6htSQoZRjeOFDx3Yuh7Zjuh45vKyUN4gO8g5l.saES', 'demo@demo.com', '99', 'M0ABC', 'io91js', 'Demo', 'Account', '0', null, null, null, null, null);
 
 
-
+DROP TABLE IF EXISTS `dxcc_entries`;
 CREATE TABLE `dxcc_entities` (
   `adif` smallint(6) NOT NULL,
   `name` varchar(150) DEFAULT NULL,
