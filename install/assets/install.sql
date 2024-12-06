@@ -440,7 +440,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` VALUES ('4', 'm0abc', '$2a$08$r9UF3YhipAY6htSQoZRjeOFDx3Yuh7Zjuh45vKyUN4gO8g5l.saES', 'demo@demo.com', '99', 'M0ABC', 'io91js', 'Demo', 'Account', '0', null, null, null, null, null);
 
 
-DROP TABLE IF EXISTS `dxcc_entries`;
+DROP TABLE IF EXISTS `dxcc_entities`;
 CREATE TABLE `dxcc_entities` (
   `adif` smallint(6) NOT NULL,
   `name` varchar(150) DEFAULT NULL,
@@ -454,6 +454,8 @@ CREATE TABLE `dxcc_entities` (
   `start` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `dxcc_exceptions`;
+
 CREATE TABLE `dxcc_exceptions` (
   `record` int(11) NOT NULL,
   `call` varchar(32) DEFAULT NULL,
@@ -466,6 +468,8 @@ CREATE TABLE `dxcc_exceptions` (
   `start` date DEFAULT NULL,
   `end` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `dxcc_prefixes`;
 
 CREATE TABLE `dxcc_prefixes` (
   `record` int(11) NOT NULL,
