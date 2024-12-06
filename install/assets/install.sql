@@ -302,7 +302,7 @@ CREATE TABLE `options` (
   `option_name` varchar(191) DEFAULT NULL,
   `option_value` longtext NOT NULL,
   `autoload` varchar(20) DEFAULT NULL,
-  PRIMARY KEY ('option_id')
+  PRIMARY KEY (`option_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ALTER TABLE `options`
