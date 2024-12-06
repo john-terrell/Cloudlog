@@ -301,11 +301,11 @@ CREATE TABLE `options` (
   `option_id` bigint(20) UNSIGNED NOT NULL,
   `option_name` varchar(191) DEFAULT NULL,
   `option_value` longtext NOT NULL,
-  `autoload` varchar(20) DEFAULT NULL
+  `autoload` varchar(20) DEFAULT NULL,
+  PRIMARY KEY ('option_id')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ALTER TABLE `options`
-  ADD PRIMARY KEY (`option_id`),
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 ALTER TABLE `options`
